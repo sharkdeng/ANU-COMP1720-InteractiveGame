@@ -199,9 +199,6 @@ function keyPressed() {
     scene4.onMouseMoved()
   }
 
-  if (key == '1'){
-    saveCanvas("thumbnail.png")
-  }
 }
 
 
