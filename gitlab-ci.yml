@@ -1,0 +1,39 @@
+image: comp1720/comp1720-2019-gitlab-ci:0.4.0
+
+variables:
+  DEST_DIR: /srv/gitlab-ce-pages/staging/$CI_JOB_ID/$CI_COMMIT_REF_NAME/$CI_PROJECT_PATH
+  SCHEMA_BASE_URL: https://cs.anu.edu.au/courses/comp1720/assets/schemas
+  COMP1720_TEST_URL: https://comp1720.cecs.anu.edu.au/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/
+
+# this task copies the sketch files to the COMP1720 test webserver so they can
+# be viewed on-campus
+page-deploy:
+  tags:
+    - comp1720
+  stage: deploy
+  only:
+    - master
+  script:
+    - mkdir -p $DEST_DIR
+    # copy assets folder, and all top-level .html and .js files
+    - cp -r assets *.html *.js $DEST_DIR
+    - echo "your sketch should be visible shortly (on campus only) at the test URL"
+    - echo $COMP1720_TEST_URL
+
+# check that you've filled out your statement of originality
+statement-of-originality:
+  tags:
+    - comp1720
+  stage: test
+  allow_failure: true
+  script:
+    - python /validate.py schema ./statement-of-originality.yml $SCHEMA_BASE_URL/statement-of-originality.json
+
+# have you committed & pushed your thumbnail.png file
+thumbnail:
+  tags:
+    - comp1720
+  stage: test
+  allow_failure: true
+  script:
+    - python /validate.py exists thumbnail.png
