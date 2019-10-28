@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="">
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>my COMP1720 sketch</title>
+
+	<!-- this is the main p5 library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+
+	<!-- this is the p5 sound library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js"></script>
+
+	<!-- this is the p5 DOM library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+
+	<!-- this is the p5 Play library -->
+	<script src="p5.play.js"></script>
+
+	<!-- this is the p5 Speech library -->
+	<script src="p5.speech.js"></script>
+
+	<!-- this is the p5 ml library -->
+	<script src="https://unpkg.com/ml5@0.4.1/dist/ml5.min.js"></script>
+
+
+	<!--
+		 Note: if you have no access to the internet, the cdnjs.cloudflare.com links
+		 above (and therefore your sketch) won't work.
+
+		 If you want to be able to work offline, you will need to download the p5
+		 libraries (e.g. from https://p5js.org/download/ and place them in a `lib`
+		 folder in this project. Then, you can remove the <script> tags above and replace
+		 them with the (currently commented-out) ones below:
+
+		 <script src="lib/p5/p5.js"></script>
+		 <script src="lib/p5/addons/p5.dom.js"></script>
+		 <script src="lib/p5/addons/p5.sound.js"></script>
+		 -->
+
+	<!-- here's where we include the actual sketch file -->
+	<script src="sprite.js"></script>
+
+	<!-- Scenes -->
+	<script src="scene1.js"></script>
+	<script src="scene2.js"></script>
+	<script src="scene3.js"></script>
+	<script src="scene4.js"></script>
+
+	<script src="layer1.js"></script>
+	<script src="layer2.js"></script>
+	<script src="layer3.js"></script>
+	<script src="layer4.js"></script>
+	<script src="layer5.js"></script>
+	<script src="layer6.js"></script>
+	<script src="layer7.js"></script>
+	<script src="layer8.js"></script>
+	
+
+	<!-- Control -->
+	<script src="sketch.js"></script>
+
+	<!-- test -->
+	<!-- <script src="test.js"></script> -->
+
+	<!-- CSS styling for "back to gallery" button, remove scrollbars -->
+	<style>
+	 body {
+	   padding: 0;
+	   margin: 0;
+	   overflow: hidden;
+	 }
+	 nav {
+	   position: absolute;
+	   bottom: 0;
+	   right: 0;
+	   font-size: 24px;
+	   color: #eee;
+	   background-color: #222;
+	   padding: 20px;
+	   opacity: 0.5;
+	   transition: opacity 0.3s;
+	   font-family: sans-serif;
+
+	 }
+	 nav > a {
+	   color: #eee;
+	 }
+	 nav:hover {
+	   opacity: 1;
+	 }
+	</style>
+
+  </head>
+
+  <body>
+	<nav><a href=".." style="text-decoration: none;">back to gallery</a></nav>
+  </body>
+
+</html>

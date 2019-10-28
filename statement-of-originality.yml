@@ -1,0 +1,41 @@
+# for information & examples on how to fill this out correctly, see
+# https://cs.anu.edu.au/courses/comp1720/resources/faq/#statement-of-originality
+
+declaration: >-
+  I declare that everything I have submitted in this assignment is entirely my
+  own work, with the following exceptions:
+
+
+# add as many "url+licence+comment" entries as necessary
+# (or remove it altogether if you haven't used any external code)
+code:
+  - comment: "I have write all the relevant code "
+    url: https://p5js.org
+    licence: fair use
+
+
+# add as many "url+licence+comment" entries as necessary
+# (or remove it altogether if you haven't used any external assets)
+assets:
+  # NOTE: "Bliss" is just here as an example, you should remove it
+  - comment: "all images"
+    url: http://616pic.com/sucai/zq9i2qkjv.html
+    licence: fair use
+
+  - comment: "the net"
+    url: https://www.netclipart.com/down/TJmRww_png-freeuse-download-cliparts-free-download-clip-art/
+    licence: fair use
+
+
+assets:
+  - comment: "the yummy fish"
+    url: https://www.kenney.nl
+    licence: fair use
+
+
+    
+
+
+# sign *your* name and uid here
+name: Limin Deng
+uid: u6849956
