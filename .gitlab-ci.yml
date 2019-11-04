@@ -16,7 +16,7 @@ page-deploy:
   script:
     - mkdir -p $DEST_DIR
     # copy assets folder, and all top-level .html and .js files
-    - cp -r assets *.html *.js $DEST_DIR
+    - cp -r assets *.html *.js thumbnail.png $DEST_DIR
     - echo "your sketch should be visible shortly (on campus only) at the test URL"
     - echo $COMP1720_TEST_URL
 
